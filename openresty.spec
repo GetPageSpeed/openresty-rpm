@@ -27,6 +27,15 @@ Requires:       lua%{luacompatver}-rds-parser
 Requires:       lua%{luacompatver}-resty-shell
 Requires:       lua%{luacompatver}-resty-signal
 Requires:       lua%{luacompatver}-resty-dns
+Requires:       lua%{luacompatver}-resty-core
+Requires:       lua%{luacompatver}-resty-redis
+Requires:       lua%{luacompatver}-resty-string
+Requires:       lua%{luacompatver}-resty-upload
+Requires:       lua%{luacompatver}-resty-websocket
+Requires:       lua%{luacompatver}-resty-limit-traffic
+Requires:       lua%{luacompatver}-resty-lock
+Requires:       lua%{luacompatver}-resty-lrucache
+Requires:       lua%{luacompatver}-resty-upstream-healthcheck
 
 BuildArch:      noarch
 
