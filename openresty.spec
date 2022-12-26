@@ -21,6 +21,7 @@ Requires:       nginx-module-stream-lua
 Requires:       nginx-module-coolkit
 Requires:       nginx-module-encrypted-session
 Requires:       nginx-module-form-input
+Requires:       nginx-module-xss
 
 Requires:       lua%{luacompatver}-rds-parser
 Requires:       lua%{luacompatver}-resty-shell
