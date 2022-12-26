@@ -1,5 +1,10 @@
 %define _debugsource_template %{nil}
 %global version_cli 0.27
+# OpenResty is compatible with 5.1 only! We must build 5.1 version always, even on <= EL8
+%global luacompatver %{nil}
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global luacompatver 5.1
+%endif
 
 Name:           openresty
 Version:        1.19.3.1
@@ -11,7 +16,13 @@ URL:            http://openresty.org/
 Source0:        https://github.com/%{name}/%{name}/archive/v%{version}/%{name}-v%{version}.tar.gz
 Source1:        https://github.com/%{name}/resty-cli/archive/v%{version_cli}/resty-cli-v%{version_cli}.tar.gz
 Group:          System Environment/Daemons
-Requires:       nginx-module-lua nginx-module-stream-lua
+Requires:       nginx-module-lua 
+Requires:       nginx-module-stream-lua
+Requires:       nginx-module-coolkit
+Requires:       nginx-module-encrypted-session
+
+Requires:       lua%{luacompatver}-rds-parser
+
 BuildArch:      noarch
 
 %description
