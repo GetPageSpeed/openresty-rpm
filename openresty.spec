@@ -7,7 +7,7 @@
 %endif
 
 Name:           openresty
-Version:        1.19.3.1
+Version:        1.21.4.1
 Release:        7%{?dist}
 Summary:        OpenResty, fast web app server extending NGINX
 
@@ -20,8 +20,12 @@ Requires:       nginx-module-lua
 Requires:       nginx-module-stream-lua
 Requires:       nginx-module-coolkit
 Requires:       nginx-module-encrypted-session
+Requires:       nginx-module-form-input
 
 Requires:       lua%{luacompatver}-rds-parser
+Requires:       lua%{luacompatver}-resty-shell
+Requires:       lua%{luacompatver}-resty-signal
+Requires:       lua%{luacompatver}-resty-dns
 
 BuildArch:      noarch
 
